@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Define the colors and their corresponding CSS variable names
     const colors = {
-        'bg-dim': '#293136',
+        // 'bg-dim': '#293136',
         'bg0': '#333C43',
         'bg1': '#3A464C',
         'bg2': '#434F55',
@@ -47,9 +47,60 @@ document.addEventListener("DOMContentLoaded", function () {
         colorBox.style.backgroundColor = `var(--${color})`;
 
         // Optional: Add text inside the div to display the color name or code
-        colorBox.textContent = `${color}: ${colors[color]}`;
+        //colorBox.textContent = `${color}: ${colors[color]}`;
 
         // Append the new div to the container
         container.appendChild(colorBox);
     }
+    const images = [
+        'pics/1.jpg',
+        'pics/2.jpg',
+        'pics/3.jpg',
+        // Add more images here
+    ];
+    // Generate a random index
+    const randomIndex = Math.floor(Math.random() * images.length);
+
+    // Get the randomly selected image path
+    const randomImagePath = images[randomIndex];
+
+    // Create an img element
+    const img = document.createElement('img');
+    img.src = randomImagePath;  // Set the image source to the randomly selected image
+    img.className = 'aside-picture';  // Set the class for styling
+
+    // Get the container div by its ID
+    const mainContainer = document.getElementById('main-container');
+
+    // Clear previous images (if any) before appending the new one
+    mainContainer.innerHTML = '';
+
+    // Append the new img element to the container
+    mainContainer.appendChild(img);
+
+    // Create a new div for the links
+    const linksContainer = document.createElement('div');
+    linksContainer.className = 'links-container';  // Set a class for styling if needed
+
+    // Array of links
+    const links = [
+        { text: 'Google', url: 'https://www.google.com' },
+        { text: 'Mozilla', url: 'https://www.mozilla.org' },
+        { text: 'GitHub', url: 'https://www.github.com' },
+        // Add more links as needed
+    ];
+
+    // Iterate over the links array to create anchor elements
+    links.forEach(link => {
+        const a = document.createElement('a');
+        a.href = link.url;  // Set the href attribute
+        a.textContent = link.text;  // Set the text of the link
+        a.target = '_blank';  // Make the link open in a new tab (optional)
+        a.className = 'link-item';  // Add a class for styling
+        linksContainer.appendChild(a);  // Append the anchor to the links container
+        linksContainer.appendChild(document.createElement('br'));  // Add a line break between links
+    });
+
+    // Append the links container to the main container
+    mainContainer.appendChild(linksContainer);
 });
