@@ -84,22 +84,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Array of links
     const links = [
-        { text: 'Google', url: 'https://www.google.com' },
-        { text: 'Mozilla', url: 'https://www.mozilla.org' },
-        { text: 'GitHub', url: 'https://www.github.com' },
-        // Add more links as needed
-    ];
+        { "text": "Calendar", "url": "https://calendar.google.com/calendar/u/0/r", "iconUrl": "icons/calendar.png" },
+        { "text": "ChatGPT", "url": "https://chatgpt.com/", "iconUrl": "icons/chatgpt.png" },
+        { "text": "Confluence", "url": "https://dcycle.atlassian.net/wiki/spaces/DD/overview?homepageId=590031", "iconUrl": "icons/confluence.png" },
+        { "text": "Dcycle", "url": "https://app.dcycle.io/", "iconUrl": "icons/dcycle.png" },
+        { "text": "Dcycle Dev", "url": "https://dev-app.dcycle.io/", "iconUrl": "icons/dcycleDev.png" },
+        { "text": "Google Drive", "url": "https://drive.google.com/drive/shared-with-me", "iconUrl": "icons/drive.png" },
+        { "text": "Factorial", "url": "https://app.factorialhr.com/dashboard", "iconUrl": "icons/factorial.png" },
+        { "text": "Figma", "url": "https://www.figma.com/design/1nlmjomse1Tzj4PTVwWvpD/%F0%9F%8F%84%E2%80%8D%E2%99%80%EF%B8%8F%5BSAAS%5DDcycle_08_GROWTH", "iconUrl": "icons/figma.png" },
+        { "text": "GitHub", "url": "https://github.com/Dcycle-by-WUM", "iconUrl": "icons/github.png" },
+        { "text": "Gmail", "url": "https://mail.google.com/mail/u/0/#inbox", "iconUrl": "icons/gmail.png" },
+        { "text": "Jira", "url": "https://dcycle.atlassian.net/jira/software/projects/DCYC/boards/1", "iconUrl": "icons/jira.png" },
+        { "text": "Google Keep", "url": "https://keep.google.com/#home", "iconUrl": "icons/keep.png" },
+        { "text": "Miro", "url": "https://miro.com/app/board/uXjVLbGE2h4=/", "iconUrl": "icons/miro.png" },
+        { "text": "Notion", "url": "https://www.notion.so/dcycle/Dcycle-s-Playbook-a0bc2b2d85e94fc59672b58e542af972", "iconUrl": "icons/notion.png" },
+        { "text": "Aws", "url": "https://signin.aws.amazon.com/switchrole?roleName=OrganizationAccountAccessRole&account=763901840913&displayName=Dcycle-dev", "iconUrl": "icons/aws.png" },
+    ]
+
 
     // Iterate over the links array to create anchor elements
     links.forEach(link => {
         const a = document.createElement('a');
         a.href = link.url;  // Set the href attribute
-        a.textContent = link.text;  // Set the text of the link
-        a.target = '_blank';  // Make the link open in a new tab (optional)
+        a.target = '_blank';  // Make the link open in a new tab
         a.className = 'link-item';  // Add a class for styling
+
+        const img = document.createElement('img');  // Create an img element
+        img.src = link.iconUrl;  // Set the src attribute to the icon URL
+        img.className = 'icon';  // Add a class for the icon
+        a.appendChild(img);  // Append the image to the anchor
+
+        const p = document.createElement('p');  // Create a paragraph element
+        p.textContent = link.text;  // Set the text of the link
+        p.className = 'link-text';  // Add a class for the text
+        a.appendChild(p);  // Append the paragraph to the anchor
+
         linksContainer.appendChild(a);  // Append the anchor to the links container
         linksContainer.appendChild(document.createElement('br'));  // Add a line break between links
     });
+
 
     // Append the links container to the main container
     mainContainer.appendChild(linksContainer);
