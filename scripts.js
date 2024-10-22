@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
     links.forEach(link => {
         const a = document.createElement('a');
         a.href = link.url;  // Set the href attribute
-        a.target = '_blank';  // Make the link open in a new tab
+        a.target = '_self';  // Make the link open in same tab
         a.className = 'link-item';  // Add a class for styling
 
         const img = document.createElement('img');  // Create an img element
