@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { "text": "Google Keep", "url": "https://keep.google.com/#home", "iconUrl": "icons/keep.png" },
         { "text": "Miro", "url": "https://miro.com/app/board/uXjVLbGE2h4=/", "iconUrl": "icons/miro.png" },
         { "text": "Notion", "url": "https://www.notion.so/dcycle/Dcycle-s-Playbook-a0bc2b2d85e94fc59672b58e542af972", "iconUrl": "icons/notion.png" },
-        { "text": "Aws", "url": "https://signin.aws.amazon.com/switchrole?roleName=OrganizationAccountAccessRole&account=763901840913&displayName=Dcycle-dev", "iconUrl": "icons/aws.png" },
+        { "text": "AWS", "url": "https://signin.aws.amazon.com/switchrole?roleName=OrganizationAccountAccessRole&account=763901840913&displayName=Dcycle-dev", "iconUrl": "icons/aws.png" },
     ]
 
 
