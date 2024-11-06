@@ -16,7 +16,7 @@ This project lets you set up a clean and distraction-free browser homepage that 
 
 ## 🚀 Demo
 
-Check out the homepage in action here: [Demo Link (if applicable)](link).
+Check out the homepage in action here: [Demo](https://juanmata42.github.io/browser_custom_home/).
 
 ---
 
