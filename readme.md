@@ -121,13 +121,48 @@ You can easily customize this homepage to match your style. Below are step-by-st
     ```html
     <link rel="icon" type="image/svg" href="path/to/your_icon.svg">
     ```
+---
+
+## 🌐 Setting as a Custom New Tab Page in Google Chrome
+
+Google Chrome doesn’t directly support setting a local HTML file as the new tab page. However, you can use an extension to achieve this. Here’s how:
+
+1. **Enable Developer Mode:**
+   - Open Chrome and navigate to `chrome://extensions/`.
+   - Enable **Developer mode** by toggling it on (usually in the top-right corner).
+
+2. **Load the "Extension" :**
+   - Go back to `chrome://extensions/`, click on **Load unpacked** and select the project folder.
+   - This will load the project as an extension, and your custom homepage will now appear every time you open a new tab.
 
 ---
+## 🎨 Applying a Color Palette Theme with GIMP
+
+To give an image a cohesive color palette theme in GIMP, follow these steps:
+
+1. **Open the Picture**  
+   - Start by opening the picture you want to modify in GIMP.
+
+2. **Generate the Color Palette**  
+   - If you don’t already have a color palette saved in GIMP, open a reference picture with the desired colors (e.g., `dark-soft.png` in the root folder).
+
+3. **Create a Custom Palette**  
+   - With the palette reference image open, go to **Image > Mode > Indexed**.
+   - Select **Generate optimum palette** and click **Convert**. You should now see a custom palette on the right side, generated from the colors in the reference image.
+
+4. **Apply the Palette to Your Image**  
+   - Switch to the picture you want to adjust.
+   - Go to **Image > Mode > Indexed** again.
+   - Select **Use custom palette** and choose the newly created palette from the dropdown.
+   - Click **Convert** to apply the palette to your image.
+
+5. **Save Your Image**  
+   - Once the palette has been applied, save your image, and you’re done!
+
+This process gives your image a uniform color scheme, making it fit seamlessly with your custom browser theme.
+
 
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
-
-Feel free to let me know if you have any more custom requirements or additional information you'd like added!
